@@ -5,25 +5,24 @@
 
 Vue.component("quoty_faq_accordion_component_1722491712", {
     template: `
-    <section class="py-8 bg-white pl-4">
-        <h2 class="text-lg font-semibold mb-5">Frequently Asked Questions about Blockchain Block Explorer</h2>
+    <section class="py-8 bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 pl-4 rounded-xl shadow-lg backdrop-filter backdrop-blur-lg bg-opacity-30">
+        <h2 class="text-2xl font-bold mb-5 text-white text-shadow">Frequently Asked Questions about Blockchain Block Explorer</h2>
         <!-- Accordion -->
-        <div class="space-y-3">
+        <div class="space-y-4">
             <!-- Accordion item -->
-            <div v-for="(term, index) in terms" :key="index" class="text-sm rounded-lg odd:bg-gradient-to-tr from-slate-100 to-slate-50 dark:from-slate-800/80 dark:to-slate-900" :class="[{ 'expanded': term.expanded }]">
+            <div v-for="(term, index) in terms" :key="index" class="text-sm rounded-lg bg-white bg-opacity-20 backdrop-filter backdrop-blur-lg shadow-md transition-all duration-300 hover:bg-opacity-30" :class="[{ 'expanded': term.expanded }]">
                 <h3>
-                    <button type="button" class="flex items-center justify-between w-full text-left font-medium px-5 py-3" @click="toggle(index)" :aria-expanded="term.expanded" :aria-controls="'terms-text-' + index">
-                    <button type="button" class="flex items-center justify-between w-full text-left font-medium px-5 py-3" @click="toggle(index)" :aria-expanded="term.expanded" :aria-controls="'terms-text-' + index">
-                        <span>{{ term.title }}</span>
-                        <svg class="shrink-0 ml-8 fill-slate-400 dark:fill-slate-500" width="12" height="12" xmlns="http://www.w3.org/2000/svg">
-                            <rect y="5" width="12" height="2" rx="1" class="transform origin-center transition duration-200 ease-out" :class="{ '!rotate-180': term.expanded }" />
-                            <rect y="5" width="12" height="2" rx="1" class="transform origin-center rotate-90 transition duration-200 ease-out" :class="{ '!rotate-180': term.expanded }" />
+                    <button type="button" class="flex items-center justify-between w-full text-left font-medium px-6 py-4 text-white" @click="toggle(index)" :aria-expanded="term.expanded" :aria-controls="'terms-text-' + index">
+                        <span class="text-lg">{{ term.title }}</span>
+                        <svg class="shrink-0 ml-8 fill-white" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                            <rect y="7" width="16" height="2" rx="1" class="transform origin-center transition duration-200 ease-out" :class="{ '!rotate-180': term.expanded }" />
+                            <rect y="7" width="16" height="2" rx="1" class="transform origin-center rotate-90 transition duration-200 ease-out" :class="{ '!rotate-180': term.expanded }" />
                         </svg>
                     </button>
                 </h3>
-                <div :id="'terms-text-' + index" role="region" :aria-labelledby="'terms-title-' + index" class="text-slate-500 dark:text-slate-400 grid overflow-hidden transition-all duration-300 ease-in-out" :class="[{ 'grid-rows-[1fr] opacity-100': term.expanded, 'grid-rows-[0fr] opacity-0': !term.expanded }]">
+                <div :id="'terms-text-' + index" role="region" :aria-labelledby="'terms-title-' + index" class="text-white grid overflow-hidden transition-all duration-300 ease-in-out" :class="[{ 'grid-rows-[1fr] opacity-100': term.expanded, 'grid-rows-[0fr] opacity-0': !term.expanded }]">
                     <div class="overflow-hidden" :id="'terms-text-' + index + '-content'">
-                        <p class="px-5 pb-3" :id="'terms-text-' + index + '-description'">
+                        <p class="px-6 pb-4 text-base" :id="'terms-text-' + index + '-description'">
                             {{ term.description }}
                         </p>
                     </div>
