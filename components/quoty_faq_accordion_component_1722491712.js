@@ -6,7 +6,7 @@
 Vue.component("quoty_faq_accordion_component_1722491712", {
     template: `
     <section class="py-8 bg-white pl-4">
-        <h2 class="text-lg font-semibold mb-5">PLACEHOLDER_FAQ_TITLE</h2>
+        <h2 class="text-lg font-semibold mb-5">Frequently Asked Questions about Blockchain Block Explorer</h2>
         <!-- Accordion -->
         <div class="space-y-3">
             <!-- Accordion item -->
@@ -35,10 +35,10 @@ Vue.component("quoty_faq_accordion_component_1722491712", {
     data() {
         return {
             terms: [
-                { title: "ACCORDION_QUESTION_1", description: "ACCORDION_ANSWER_1", expanded: false },
-                { title: "ACCORDION_QUESTION_2", description: "ACCORDION_ANSWER_2", expanded: false },
-                { title: "ACCORDION_QUESTION_3", description: "ACCORDION_ANSWER_3", expanded: false },
-                { title: "ACCORDION_QUESTION_4", description: "ACCORDION_ANSWER_4", expanded: false },
+                { title: "What is a blockchain block explorer?", description: "A blockchain block explorer is an app that allows you to view and search data on a blockchain network. It provides transparency into transactions, addresses, balances, and other on-chain activity.", expanded: false },
+                { title: "How does this app help find new Ethereum blocks?", description: "This app connects to Ethereum nodes and constantly monitors the network for new blocks as they are mined. When a new block is detected, it is immediately indexed and its data is made available for viewing and analysis within the app.", expanded: false },
+                { title: "What kind of data can I see for each block?", description: "For each Ethereum block, you can view details like the block number, timestamp, transaction count, miner, difficulty, gas used, and a list of all transactions included in that block.", expanded: false },
+                { title: "Is this app only for Ethereum?", description: "Currently this block explorer focuses on Ethereum mainnet and major EVM-compatible chains like Polygon, Binance Smart Chain, etc. However, support for additional blockchains may be added in the future.", expanded: false },
             ],
         };
     },
